@@ -108,13 +108,14 @@ section {
     display: flex;
     text-align: center;
     align-items: center;
+    align-items: stretch;
 }
 
 .side-image {
     display: block;
-    width: 100%;
-    max-height: 30ch;
-    image-rendering: crisp-edges;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
 }
 
 .side-text {
@@ -152,6 +153,11 @@ section {
 
 .side-image-container {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    overflow: hidden;
 }
 
 .one-info {
@@ -173,7 +179,7 @@ footer {
     text-align: center;
 }
 
-@media only screen and (max-width: 110vh) {
+@media only screen and (max-width: 100vh) {
     nav {
         flex-wrap: wrap;
         justify-content: center;
@@ -196,6 +202,16 @@ footer {
     
     .image-left {
         flex-direction: column;
+    }
+
+    .side-image-container {
+        width: 100%;
+        max-height: 20em;
+    }
+
+    .side-image {
+        height: auto;
+        width: 100%;
     }
 
     .flipped {
