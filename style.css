@@ -53,7 +53,7 @@ td h4 {
 
 .chocolate {
     --mask:
-        radial-gradient(1.57rem at 50% 2.10rem,#000 99%,#0000 101%) calc(50% - 1.4rem) 0/2.8rem 51% repeat-x,
+    radial-gradient(1.57rem at 50% 2.10rem,#000 99%,#0000 101%) calc(50% - 1.4rem) 0/2.8rem 51% repeat-x,
         radial-gradient(1.57rem at 50% -1.4rem,#0000 99%,#000 101%) 50% 0.7rem/2.8rem calc(51% - 0.7rem) repeat-x,
         radial-gradient(1.57rem at 50% calc(100% - 2.10rem),#000 99%,#0000 101%) calc(50% - 1.4rem) 100%/2.8rem 51% repeat-x,
         radial-gradient(1.57rem at 50% calc(100% + 1.40rem),#0000 99%,#000 101%) 50% calc(100% - 0.7rem)/2.8rem calc(51% - 0.7rem) repeat-x;
@@ -199,6 +199,7 @@ section {
 .one-info {
     padding: 2ch;
     line-height: 1.65em;
+    overflow-x: auto;
 }
 
 ul {
