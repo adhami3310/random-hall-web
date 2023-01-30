@@ -15,11 +15,12 @@ function shuffle(array) {
     return array;
 }
 
+
 const SPRINKLE_HEIGHT = 16;
 const SPRINKLE_WIDTH = 5;
 const COLORS = ["#FFFFFF", "#EDE730", "#8D5636", "#f03e3e", "#0b7285"];
-const DENSITY = 0.0015;
-
+const DENSITY = 0.002;
+const CHUNK = 5;
 
 
 
@@ -30,15 +31,16 @@ document.querySelectorAll(".sprinkles").forEach(cont => {
 
     function addPoint() {
         if (i >= count) return;
-        i += 1;
-        const node = document.createElement("div");
-        node.classList.add("sprinkle");
-        node.style.height = `${SPRINKLE_HEIGHT}px`;
-        node.style.width = `${SPRINKLE_WIDTH}px`;
-        node.style.transform = `translateX(${xValues[i]}px) translateY(${Math.random() * cont.clientHeight - SPRINKLE_HEIGHT / 2}px) rotate(${Math.random()*360}deg)`;
-        node.style.background = COLORS[Math.floor(Math.random() * COLORS.length)];
-        cont.appendChild(node);
-        setTimeout(addPoint, 1000/count);
+        for (let j = 0; j < CHUNK; j++, i++) {
+            const node = document.createElement("div");
+            node.classList.add("sprinkle");
+            node.style.height = `${SPRINKLE_HEIGHT}px`;
+            node.style.width = `${SPRINKLE_WIDTH}px`;
+            node.style.transform = `translateX(${xValues[i]}px) translateY(${Math.random() * (cont.clientHeight - 0.8 * 3 * SPRINKLE_HEIGHT) + 0.8 * SPRINKLE_HEIGHT}px) rotate(${Math.random()*360}deg)`;
+            node.style.background = COLORS[Math.floor(Math.random() * COLORS.length)];
+            cont.appendChild(node);            
+        }
+        setTimeout(addPoint, 1000/(count / CHUNK));
     }
 
     addPoint();
