@@ -17,7 +17,7 @@ function shuffle(array) {
 
 const SPRINKLE_HEIGHT = 16;
 const SPRINKLE_WIDTH = 5;
-const COLORS = ["#FEA9A7", "#94CAEF", "#F57CAA", "#FFB600", "#FE5E5B"];
+const COLORS = ["#FFFFFF", "#EDE730", "#8D5636", "#f03e3e", "#0b7285"];
 const DENSITY = 0.0015;
 
 
@@ -38,7 +38,7 @@ document.querySelectorAll(".sprinkles").forEach(cont => {
         node.style.transform = `translateX(${xValues[i]}px) translateY(${Math.random() * cont.clientHeight - SPRINKLE_HEIGHT / 2}px) rotate(${Math.random()*360}deg)`;
         node.style.background = COLORS[Math.floor(Math.random() * COLORS.length)];
         cont.appendChild(node);
-        setTimeout(addPoint, 10);
+        setTimeout(addPoint, 1000/count);
     }
 
     addPoint();

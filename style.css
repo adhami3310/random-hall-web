@@ -3,18 +3,18 @@ body {
     font-family: 'Rubik', sans-serif;
     background-color: pink;
     background-image: url('images/bg.svg');
-    background-size: 5%;
+    background-size: 5em;
 }
 
 header {
-    background: #F5B13C;
+    background: #FFD170;
     padding: 0.2em 0;
     border-bottom: 4px solid hsl(38, 90%, 40%);
     overflow: hidden;
 }
 
 footer {
-    background: #F5B13C;
+    background: #FFD170;
     padding: 0.2em 0;
     border-top: 4px solid hsl(38, 90%, 40%);
 }
@@ -28,7 +28,7 @@ footer {
     -webkit-mask: var(--mask);
     mask: var(--mask);
     
-    background: #5E3F35;
+    background: #FD5295;
     padding: 22px;
     color: white;
 }
@@ -42,6 +42,8 @@ nav {
 }
 
 .nav-container {
+    z-index: 1;
+    margin-left: auto;
     display: flex;
     column-gap: 0.8em;
     flex-wrap: wrap;
@@ -58,9 +60,23 @@ nav {
     content: '';
     border-radius: 2em;
     background: white;
+    top: 0;
+    left: 0;
+}
+
+nav a::after {
+    content: attr(data-content);
+    -webkit-text-stroke: 15px #a61e4d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 nav a {
+    text-align: center;
+    position: relative;
+    z-index: 1;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
@@ -69,7 +85,6 @@ nav a {
 
 nav a:hover {
     color: #F5B13C;
-    text-decoration: underline;
 }
 
 main {
@@ -171,11 +186,12 @@ footer {
     .sprinkles {
         flex: 100;
         min-width: 80vw;
-        height: 1em;
+        min-height: 1em;
     }
 
     .nav-container {
         justify-content: center;
+        margin-left: 0;
     }
     
     .image-left {
