@@ -9,10 +9,17 @@ body {
 header {
     background: #F5B13C;
     padding: 0.2em 0;
+    border-bottom: 4px solid hsl(38, 90%, 40%);
+    overflow: hidden;
 }
 
-nav {
+footer {
+    background: #F5B13C;
+    padding: 0.2em 0;
+    border-top: 4px solid hsl(38, 90%, 40%);
+}
 
+.chocolate {
     --mask:
         radial-gradient(1.57rem at 50% 2.10rem,#000 99%,#0000 101%) calc(50% - 1.4rem) 0/2.8rem 51% repeat-x,
         radial-gradient(1.57rem at 50% -1.4rem,#0000 99%,#000 101%) 50% 0.7rem/2.8rem calc(51% - 0.7rem) repeat-x,
@@ -20,20 +27,30 @@ nav {
         radial-gradient(1.57rem at 50% calc(100% + 1.40rem),#0000 99%,#000 101%) 50% calc(100% - 0.7rem)/2.8rem calc(51% - 0.7rem) repeat-x;
     -webkit-mask: var(--mask);
     mask: var(--mask);
-
+    
     background: #5E3F35;
+    padding: 22px;
+    color: white;
+}
+
+nav {
     font-family: 'Fredoka One';
     font-size: 2em;
     display: flex;
     gap: 0.8em;
-    padding: 0.8em;
     border-radius: 0.5rem;
 }
+
+.nav-container {
+    display: flex;
+    column-gap: 0.8em;
+    flex-wrap: wrap;
+} 
 
 .sprinkles {
     position: relative;
     flex: 1;
-    margin: -0.4em 0;
+    margin: -0.2em 0;
 }
 
 .sprinkle {
@@ -60,15 +77,15 @@ main {
     margin: auto;
     border-top: none;
     border-bottom: none;
-    line-height: 2rem;
     font-size: 1.5em;
+    padding: 0 1em;
 }
 
 section {
     background: white;
     overflow: hidden;
     border-radius: 1em;
-    border: 4px solid #E89A9A;
+    border: 4px solid hsl(0, 63%, 66%);
     margin: 1em 0;
 }
 
@@ -81,11 +98,35 @@ section {
 .side-image {
     display: block;
     width: 100%;
+    max-height: 30ch;
     image-rendering: crisp-edges;
 }
 
 .side-text {
     flex: 1;
+    line-height: 2rem;
+}
+
+.side-text h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fredoka One';
+    font-weight: 400;
+    line-height: 2.6rem;
+    margin: 0 0 0.5em 0;
+    gap: 0.2em;
+}
+
+.side-text h2::before, h2::after {
+    display: block;
+    content: '';
+    background: url('images/pink-donut.svg');
+    background-size: contain;
+    height: 1.2em;
+    width: 1.2em;
+    min-height: 1.2em;
+    min-width: 1.2em;
 }
 
 .side-text-content {
@@ -99,4 +140,47 @@ section {
 
 .one-info {
     padding: 2ch;
+}
+
+ul {
+    text-align: start;
+    list-style-image: url('images/bullet-donut.svg');
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+}
+
+@media only screen and (max-width: 110vh) {
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 1.4em;
+    }
+
+    .sprinkles {
+        flex: 100;
+        min-width: 80vw;
+        height: 1em;
+    }
+
+    .nav-container {
+        justify-content: center;
+    }
+    
+    .image-left {
+        flex-direction: column;
+    }
+
+    .flipped {
+        flex-direction: column-reverse;
+    }
 }
