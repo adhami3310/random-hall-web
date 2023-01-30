@@ -19,6 +19,38 @@ footer {
     border-bottom: 4px solid hsl(38, 90%, 40%);
 }
 
+.video-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid hsl(0, 63%, 66%); 
+    text-align: center;
+}
+
+td {
+    padding: 1ch;
+    border: 3px solid hsl(0, 63%, 66%);  
+}
+
+td:last-child {
+    white-space: nowrap;
+}
+
+td h4 {
+    margin: 0;
+}
+
+.video {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
 .chocolate {
     --mask:
         radial-gradient(1.57rem at 50% 2.10rem,#000 99%,#0000 101%) calc(50% - 1.4rem) 0/2.8rem 51% repeat-x,
