@@ -16,6 +16,7 @@ footer {
     background: #FFD170;
     padding: 0.2em 0;
     border-top: 4px solid hsl(38, 90%, 40%);
+    border-bottom: 4px solid hsl(38, 90%, 40%);
 }
 
 .chocolate {
