@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    background-color: pink;
+    background-image: url('images/bg.svg');
+    background-size: 5%;
+}
+
+header {
+    background: #F5B13C;
+    padding: 0.2em 0;
+}
+
+nav {
+
+    --mask:
+        radial-gradient(1.57rem at 50% 2.10rem,#000 99%,#0000 101%) calc(50% - 1.4rem) 0/2.8rem 51% repeat-x,
+        radial-gradient(1.57rem at 50% -1.4rem,#0000 99%,#000 101%) 50% 0.7rem/2.8rem calc(51% - 0.7rem) repeat-x,
+        radial-gradient(1.57rem at 50% calc(100% - 2.10rem),#000 99%,#0000 101%) calc(50% - 1.4rem) 100%/2.8rem 51% repeat-x,
+        radial-gradient(1.57rem at 50% calc(100% + 1.40rem),#0000 99%,#000 101%) 50% calc(100% - 0.7rem)/2.8rem calc(51% - 0.7rem) repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+
+    background: #5E3F35;
+    font-family: 'Fredoka One';
+    font-size: 2em;
+    display: flex;
+    gap: 0.8em;
+    padding: 0.8em;
+    border-radius: 0.5rem;
+}
+
+.sprinkles {
+    position: relative;
+    flex: 1;
+    margin: -0.4em 0;
+}
+
+.sprinkle {
+    position: absolute;
+    content: '';
+    border-radius: 2em;
+    background: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 200ms;
+}
+
+nav a:hover {
+    color: #F5B13C;
+    text-decoration: underline;
+}
+
+main {
+    max-width: 80ch;
+    margin: auto;
+    border-top: none;
+    border-bottom: none;
+    line-height: 2rem;
+    font-size: 1.5em;
+}
+
+section {
+    background: white;
+    overflow: hidden;
+    border-radius: 1em;
+    border: 4px solid #E89A9A;
+    margin: 1em 0;
+}
+
+.image-left {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.side-image {
+    display: block;
+    width: 100%;
+    image-rendering: crisp-edges;
+}
+
+.side-text {
+    flex: 1;
+}
+
+.side-text-content {
+    padding: 1ch;
+    box-sizing: content-box;
+}
+
+.side-image-container {
+    flex: 1;
+}
+
+.one-info {
+    padding: 2ch;
+}
