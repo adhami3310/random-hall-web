@@ -19,8 +19,8 @@ function shuffle(array) {
 const SPRINKLE_HEIGHT = 16;
 const SPRINKLE_WIDTH = 5;
 const COLORS = ["#FFFFFF", "#EDE730", "#8D5636", "#f03e3e", "#0b7285"];
-const DENSITY = 0.002;
-const CHUNK = 5;
+const DENSITY = 0.00035;
+const CHUNK = 1;
 
 
 

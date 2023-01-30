@@ -33,11 +33,16 @@ footer {
 }
 
 nav {
-    font-family: 'Fredoka One';
+    font-family: 'Fredoka';
+    font-weight: 700;
     font-size: 2em;
     display: flex;
     gap: 0.8em;
     border-radius: 0.5rem;
+}
+
+.title {
+    white-space: nowrap;
 }
 
 .nav-container {
@@ -63,7 +68,7 @@ nav {
 
 nav a::after {
     content: attr(data-content);
-    -webkit-text-stroke: 15px #a61e4d;
+    -webkit-text-stroke: 0.45em #a61e4d;
     position: absolute;
     top: 0;
     left: 0;
@@ -89,7 +94,7 @@ main {
     margin: auto;
     border-top: none;
     border-bottom: none;
-    font-size: 1.5em;
+    font-size: 1.25em;
     padding: 0 1em;
 }
 
@@ -125,8 +130,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Fredoka One';
-    font-weight: 400;
+    font-family: 'Fredoka';
+    font-weight: 600;
     line-height: 2.6rem;
     margin: 0 0 0.5em 0;
     gap: 0.2em;
