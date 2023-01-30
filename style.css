@@ -107,7 +107,7 @@ section {
     line-height: 2rem;
 }
 
-.side-text h2 {
+.section-header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,7 +118,7 @@ section {
     gap: 0.2em;
 }
 
-.side-text h2::before, h2::after {
+.section-header::before, .section-header::after {
     display: block;
     content: '';
     background: url('images/pink-donut.svg');
@@ -132,6 +132,7 @@ section {
 .side-text-content {
     padding: 1ch;
     box-sizing: content-box;
+    line-height: 1.65em;
 }
 
 .side-image-container {
@@ -140,6 +141,7 @@ section {
 
 .one-info {
     padding: 2ch;
+    line-height: 1.65em;
 }
 
 ul {
