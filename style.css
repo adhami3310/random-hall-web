@@ -261,6 +261,28 @@ footer {
     margin-top: calc(-1 * var(--icon-size) * 3/5);
 }
 
+.centered {
+    text-align: center;
+}
+
+.primary-button {
+    appearance: none;
+    border: none;
+    border-radius: 5em;
+    padding: 0.3em 0.6em;
+    font: inherit;
+    font-size: 1.75em;
+    text-decoration: none;
+    background: hsl(0, 63%, 46%);
+    transition: background 200ms;
+    color: white;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background: hsl(0, 63%, 41%);
+}
+
 @media only screen and (max-width: 100vh) {
     nav {
         flex-wrap: wrap;
