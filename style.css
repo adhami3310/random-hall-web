@@ -229,7 +229,7 @@ footer {
 .left-donuts {
     display: flex;
     flex-direction: column;
-    width: var(--icon-size);
+    width: calc(1.1 * var(--icon-size));
     align-items: center;
 }
 
@@ -238,13 +238,13 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: var(--icon-size);
+    width: calc(1.1 * var(--icon-size));
 }
 
 .right-donuts {
     display: flex;
     flex-direction: column;
-    width: var(--icon-size);
+    width: calc(1.1 * var(--icon-size));
     align-items: center;
 }
 
