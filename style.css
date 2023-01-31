@@ -216,6 +216,47 @@ footer {
     text-align: center;
 }
 
+.donut-container {
+    display: flex;
+    justify-content: center;
+    --icon-size: 256px;
+}
+
+.left-donuts {
+    display: flex;
+    flex-direction: column;
+    width: var(--icon-size);
+    align-items: center;
+}
+
+.donut-container a {
+    height: var(--icon-size);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--icon-size);
+}
+
+.right-donuts {
+    display: flex;
+    flex-direction: column;
+    width: var(--icon-size);
+    align-items: center;
+}
+
+.donut-container:has(.donut:hover) .donut:not(:hover) {
+    opacity: 0.1;
+}
+
+.donut {
+    height: var(--icon-size);
+    width: max-content;
+}
+
+.donut-container a:not(:first-child) {
+    margin-top: calc(-1 * var(--icon-size) * 3/5);
+}
+
 @media only screen and (max-width: 100vh) {
     nav {
         flex-wrap: wrap;
@@ -253,5 +294,9 @@ footer {
 
     .flipped {
         flex-direction: column-reverse;
+    }
+
+    .donut-container {
+        --icon-size: 128px;
     }
 }
