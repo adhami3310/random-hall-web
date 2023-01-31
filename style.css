@@ -65,6 +65,10 @@ td h4 {
     color: white;
 }
 
+.chocolate.dark {
+    background: #710f0c;
+}
+
 nav {
     font-family: 'Fredoka';
     font-weight: 700;
