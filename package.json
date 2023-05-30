@@ -1,0 +1,23 @@
+{
+  "name": "random-hall-web",
+  "version": "1.0.0",
+  "description": "Public webpage of Random Hall.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adhami3310/random-hall-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adhami3310/random-hall-web/issues"
+  },
+  "homepage": "https://github.com/adhami3310/random-hall-web#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

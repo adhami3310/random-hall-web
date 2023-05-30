@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: 'Rubik', sans-serif;
     background-color: pink;
-    background-image: url('images/bg.svg');
+    background-image: url('/images/bg.svg');
     background-size: 5em;
 }
 
@@ -28,13 +28,13 @@ footer {
 table {
     width: 100%;
     border-collapse: collapse;
-    border: 3px solid hsl(0, 63%, 66%); 
+    border: 3px solid hsl(0, 63%, 66%);
     text-align: center;
 }
 
 td {
     padding: 1ch;
-    border: 3px solid hsl(0, 63%, 66%);  
+    border: 3px solid hsl(0, 63%, 66%);
 }
 
 td:last-child {
@@ -53,13 +53,13 @@ td h4 {
 
 .chocolate {
     --mask:
-    radial-gradient(1.57rem at 50% 2.10rem,#000 99%,#0000 101%) calc(50% - 1.4rem) 0/2.8rem 51% repeat-x,
-        radial-gradient(1.57rem at 50% -1.4rem,#0000 99%,#000 101%) 50% 0.7rem/2.8rem calc(51% - 0.7rem) repeat-x,
-        radial-gradient(1.57rem at 50% calc(100% - 2.10rem),#000 99%,#0000 101%) calc(50% - 1.4rem) 100%/2.8rem 51% repeat-x,
-        radial-gradient(1.57rem at 50% calc(100% + 1.40rem),#0000 99%,#000 101%) 50% calc(100% - 0.7rem)/2.8rem calc(51% - 0.7rem) repeat-x;
+        radial-gradient(1.57rem at 50% 2.10rem, #000 99%, #0000 101%) calc(50% - 1.4rem) 0/2.8rem 51% repeat-x,
+        radial-gradient(1.57rem at 50% -1.4rem, #0000 99%, #000 101%) 50% 0.7rem/2.8rem calc(51% - 0.7rem) repeat-x,
+        radial-gradient(1.57rem at 50% calc(100% - 2.10rem), #000 99%, #0000 101%) calc(50% - 1.4rem) 100%/2.8rem 51% repeat-x,
+        radial-gradient(1.57rem at 50% calc(100% + 1.40rem), #0000 99%, #000 101%) 50% calc(100% - 0.7rem)/2.8rem calc(51% - 0.7rem) repeat-x;
     -webkit-mask: var(--mask);
     mask: var(--mask);
-    
+
     background: #FD5295;
     padding: 25px;
     color: white;
@@ -88,7 +88,7 @@ nav {
     display: flex;
     column-gap: 0.8em;
     flex-wrap: wrap;
-} 
+}
 
 .sprinkles {
     position: relative;
@@ -149,6 +149,11 @@ section {
     align-items: stretch;
 }
 
+section:nth-child(even) .image-left {
+    flex-direction: row-reverse;
+}
+
+
 .side-image {
     display: block;
     min-height: 100%;
@@ -174,10 +179,11 @@ section {
     gap: 0.2em;
 }
 
-.section-header::before, .section-header::after {
+.section-header::before,
+.section-header::after {
     display: block;
     content: '';
-    background: url('images/pink-donut.svg');
+    background: url('/images/pink-donut.svg');
     background-size: contain;
     height: 1.2em;
     width: 1.2em;
@@ -208,7 +214,7 @@ section {
 
 ul {
     text-align: start;
-    list-style-image: url('images/bullet-donut.svg');
+    list-style-image: url('/images/bullet-donut.svg');
 }
 
 a {
@@ -303,7 +309,7 @@ footer {
         justify-content: center;
         margin-left: 0;
     }
-    
+
     .image-left {
         flex-direction: column;
     }
@@ -316,10 +322,6 @@ footer {
     .side-image {
         height: auto;
         width: 100%;
-    }
-
-    .flipped {
-        flex-direction: column-reverse;
     }
 
     .donut-container {
