@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: 'Rubik', sans-serif;
     background-color: pink;
-    background-image: url('/images/bg.svg');
+    background-image: url('images/bg.svg');
     background-size: 5em;
 }
 
@@ -183,7 +183,7 @@ section:nth-child(even) .image-left {
 .section-header::after {
     display: block;
     content: '';
-    background: url('/images/pink-donut.svg');
+    background: url('images/pink-donut.svg');
     background-size: contain;
     height: 1.2em;
     width: 1.2em;
@@ -214,7 +214,7 @@ section:nth-child(even) .image-left {
 
 ul {
     text-align: start;
-    list-style-image: url('/images/bullet-donut.svg');
+    list-style-image: url('images/bullet-donut.svg');
 }
 
 a {
