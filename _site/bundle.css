@@ -314,6 +314,10 @@ footer {
         flex-direction: column;
     }
 
+    section:nth-child(even) .image-left {
+        flex-direction: column;
+    }
+
     .side-image-container {
         width: 100%;
         max-height: 20em;
